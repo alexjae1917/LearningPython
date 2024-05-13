@@ -3,24 +3,25 @@ ex2 = [1, 2, 3]
 ex3 = [1, 2, 3, 4, 5]
 ex4 = [1]
 ex5 = []
-def division(lst):
-    res =[]
-    i = int(len(lst)/2+1)
-    j = int(len(lst)/2)
 
+ex = ex3
 
+res = []
+j = len(ex) // 2
 
-    if len(lst) == 1:
-        res.append(lst[0])
-        res.append([])
-    elif len(lst) % 2 == 0:
-        res.append(lst[0:j])
-        res.append(lst[j:])
-    elif len(lst) % 2 != 0:
-        res.append(lst[:i])
-        res.append(lst[i:])
-    else:
-        res =[[],[]]
-    return res
+if len(ex) == 1:
+    res.append(ex[0])
+    res.append([])
 
-print( division(ex5) )
+elif len(ex) % 2 == 0:
+    res.append(ex[:j])
+    res.append(ex[j:])
+
+elif len(ex) % 2 != 0:
+    res.append(ex[:j + 1])
+    res.append(ex[j + 1:])
+
+else:
+    res = [[], []]
+
+print(res)
