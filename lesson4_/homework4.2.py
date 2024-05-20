@@ -10,3 +10,4 @@ for i in range(0,len(exm),2):
      sum += exm[i]
 
 print(sum * exm[-1])
+
