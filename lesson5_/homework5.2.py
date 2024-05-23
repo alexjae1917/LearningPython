@@ -17,4 +17,4 @@ while check == 'y':
         else:
             print(number1 / number2)
 
-    check = input('\n Do you wnt continue? y/n ')
+    check = input('\n Do you want continue? y/n ')
