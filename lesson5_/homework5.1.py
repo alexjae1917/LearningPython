@@ -3,8 +3,8 @@ import string
 
 
 def check(name):
-    cnta = 0
-    cnt_ = 0
+    cntalpha = 0
+    cntline = 0
 
 
 
@@ -16,16 +16,16 @@ def check(name):
         return False
 
     for i in name:
-        if i =='_':cnt_+=1
+        if i =='_':cntline+=1
 
         if i in string.punctuation and i != '_' or i == ' ':
             return False
 
         if i.isalpha():
-            cnta += 1
-            if i == i.upper(): return False
+            cntalpha += 1
+            if i.isupper(): return False
 
-    if cnta == 0 and cnt_>1: return False
+    if cntalpha == 0 and cntline>1: return False
 
     return True
 
