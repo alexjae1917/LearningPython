@@ -2,7 +2,7 @@ import string
 
 st = input ('Enter hashtag string ')
 st=st.lower()
-#st =st.title()
+
 st = list(st)
 
 for i in st:
@@ -11,7 +11,7 @@ for i in st:
         st.remove(i)
     print(st)
 res=''.join(''.join(st).title().split())
-#res =''.join(st)
+
 
 print('#'+res)
 #should, I. subscribe? Yes
