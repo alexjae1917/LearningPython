@@ -7,5 +7,4 @@ while multi > 9:
 
     number = str(multi)
 
-print (multi)
-
+print(multi)

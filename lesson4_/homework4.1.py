@@ -7,7 +7,7 @@ ex = ex4
 
 
 def zero(n):
-    return n==0
+    return n == 0
 
 
 ex.sort(key=zero)
