@@ -1,7 +1,7 @@
 import string
 
 
-def is_palindrome(text):
+def is_palindrome(text: str) -> bool:
     text = text.lower()
     text = list(text)
     for i in text:
