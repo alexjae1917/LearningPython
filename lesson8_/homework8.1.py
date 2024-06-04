@@ -1,15 +1,14 @@
-def refactor(number):
-    for i in range(len(number)):
-        number[i] = int(number[i])
-    return number
+
 
 
 def add_one(some_list: list) -> list:
     n = ''
-    for i in some_list: n += str(i)
+    for i in some_list:
+        n += str(i)
     n = int(n) + 1
-    some_list = refactor(list(str(n)))
-    return some_list
+    res = list(map(int, str(n)))
+
+    return res
 
 
 assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'

@@ -1,6 +1,7 @@
 import string
 
 
+
 def is_palindrome(text: str) -> bool:
     text = text.lower()
     text = list(text)
@@ -9,9 +10,9 @@ def is_palindrome(text: str) -> bool:
             text.remove(i)
 
     text = ''.join(''.join(text).split())
-    reversed = list(text)
-    reversed.reverse()
-    if list(text) == reversed:
+
+    rev = text[::-1]
+    if text == rev:
         return True
     return False
 
