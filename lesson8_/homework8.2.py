@@ -1,16 +1,16 @@
 import string
 
 
+def valid(i):
+    if i in string.punctuation or i.isspace():
+        return False
+    return True
+
 
 def is_palindrome(text: str) -> bool:
     text = text.lower()
-    text = list(text)
-    for i in text:
-        if i in string.punctuation:
-            text.remove(i)
-
-    text = ''.join(''.join(text).split())
-
+    filt = filter(valid, text)
+    text = ''.join(list(filt))
     rev = text[::-1]
     if text == rev:
         return True

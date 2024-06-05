@@ -1,6 +1,4 @@
 
-
-
 def add_one(some_list: list) -> list:
     n = ''
     for i in some_list:
