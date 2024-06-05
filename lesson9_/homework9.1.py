@@ -8,15 +8,15 @@ def valid(char):
 
 
 def popular_words (text: str, words: list) -> dict:
-    dictonary = {}
+    result = {}
     clear_text = filter(valid, text)
     text = ''.join(list(clear_text))
     text = text.lower().split()
     for i in words:
         counter = text.count(i)
-        dictonary.update({i: counter})
+        result.update({i: counter})
 
-    return dictonary
+    return result
 
 
 
