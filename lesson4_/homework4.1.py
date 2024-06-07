@@ -1,17 +1,17 @@
 ex1 = [0, 1, 0, 12, 3]
 ex2 = [0]
 ex3 = [1, 0, 13, 0, 0, 0, 5]
-ex4 = [9, 0, 7, 31, 0, 45, 0, 45, 0, 0, 96, 0]
+ex4 = [9, 0, 7, 31, 0, 45, 7, 45, 0, 0, 96, 0]
 
 ex = ex4
 
 
-def zero(n):
-    return n == 0
-
-
-ex.sort(key=zero)
-print(ex)
+# def zero(n):
+#     return n == 0
+#
+#
+# ex.sort(key=zero)
+# print(ex)
 
 # ex.reverse()
 # res = []
@@ -24,3 +24,9 @@ print(ex)
 #
 #
 # print(res)
+
+
+print(ex)
+#ex.extend([0]*zero)
+
+print(ex)
