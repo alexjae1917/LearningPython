@@ -2,9 +2,8 @@
 def difference(*args) -> int | float:
     if args == ():
         return 0
-    lst = sorted(args)
 
-    return round(lst[-1] - lst[0], 2)
+    return round(max(args) - min(args), 2)
 
 
 assert difference(1, 2, 3) == 2, 'Test1'
