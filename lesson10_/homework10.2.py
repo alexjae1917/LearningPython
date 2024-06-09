@@ -1,5 +1,7 @@
 def generate_cube_numbers(end):
-    pass
+    for i in range(2,end):
+        if i**3 <= end:
+            yield i**3
 
 from inspect import isgenerator
 
