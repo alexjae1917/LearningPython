@@ -1,7 +1,7 @@
 import string
 
 
-def valid(char):
+def valid(char: str) -> bool:
     if char in string.punctuation:
         return False
     return True

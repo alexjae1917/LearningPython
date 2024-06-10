@@ -1,4 +1,3 @@
-
 def difference(*args) -> int | float:
     if args == ():
         return 0

@@ -1,6 +1,6 @@
-def first_word(text):
+def first_word(text: str) -> str:
     """ Пошук першого слова """
-    text = text.replace('.',' ')
+    text = text.replace('.', ' ')
     text = text.replace(',', ' ')
     text = text.split()
 

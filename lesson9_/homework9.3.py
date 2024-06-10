@@ -1,10 +1,12 @@
 from inspect import isgenerator
+from typing import Callable
 
 
-def pow(x):
+def pow(x: int) -> int:
     return x ** 2
 
-def some_gen(begin, end, func):
+
+def some_gen(begin: int, end: int, func: Callable):
     """
      begin: перший елемент послідовності
      end: кількість елементів у послідовності
@@ -13,7 +15,7 @@ def some_gen(begin, end, func):
     d = begin
     for i in range(end):
         yield d
-        d = pow(d)
+        d = func(d)
 
 
 gen = some_gen(2, 4, pow)
