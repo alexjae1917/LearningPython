@@ -1,11 +1,10 @@
-
 def valid(lst: list, n):
     for i in lst[n:]:
         if i % n == 0:
             lst.remove(i)
 
 
-def prime_generator(end):
+def prime_generator(end: int) -> list:
     lst = []
     for i in range(2,end+1):
         lst.append(i)

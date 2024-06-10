@@ -1,9 +1,10 @@
-def generate_cube_numbers(end):
-    for i in range(2,end):
-        if i**3 <= end:
-            yield i**3
-
 from inspect import isgenerator
+def generate_cube_numbers(end):
+    for i in range(2, end):
+        cube = i ** 3
+        if cube <= end:
+            yield i ** 3
+
 
 gen = generate_cube_numbers(1)
 assert isgenerator(gen) == True, 'Test0'

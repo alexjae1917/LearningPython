@@ -1,6 +1,6 @@
 class Item:
 
-    def __init__(self, name, price, description, dimensions):
+    def __init__(self, name: str, price: int, description: str, dimensions: str):
         self.price = price
         self.description = description
         self.dimensions = dimensions
@@ -12,7 +12,7 @@ class Item:
 
 class User:
 
-    def __init__(self, name, surname, phonenumber):
+    def __init__(self, name: str, surname: str, phonenumber: str):
         self.name = name
         self.surname = surname
         self.phonenumber = phonenumber
@@ -22,7 +22,7 @@ class User:
 
 
 class Purchase:
-    def __init__(self, user):
+    def __init__(self, user: User):
         self.products = {}
         self.user = user
         self.total = 0
