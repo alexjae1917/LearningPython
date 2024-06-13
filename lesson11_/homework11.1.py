@@ -1,6 +1,6 @@
 class Human:
 
-    def init(self, gender, age, first_name, last_name):
+    def init(self, gender: str, age: int, first_name: str, last_name: str):
         self.gender = gender
         self.age = age
         self.first_name = first_name
@@ -12,7 +12,7 @@ class Human:
 
 class Student(Human):
 
-    def __init__(self, gender, age, first_name, last_name, record_book):
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str):
         self.init(gender, age, first_name, last_name)
         self.record_book = record_book
 
@@ -22,19 +22,19 @@ class Student(Human):
 
 class Group:
 
-    def __init__(self, number):
+    def __init__(self, number: str):
         self.number = number
         self.group = set()
 
     def add_student(self, student: Student):
         self.group.add(student)
 
-    def delete_student(self, last_name):
+    def delete_student(self, last_name: str):
         for i in self.group:
             if i.last_name == last_name:
                 return self.group.remove(i)
 
-    def find_student(self, last_name):
+    def find_student(self, last_name: str) -> Student | None:
         for i in self.group:
             if i.last_name == last_name:
                 return i
