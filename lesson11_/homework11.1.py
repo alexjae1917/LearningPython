@@ -32,7 +32,7 @@ class Group:
     def delete_student(self, last_name: str):
         for i in self.group:
             if i.last_name == last_name:
-                return self.group.remove(i)
+                return self.group.discard(i)
 
     def find_student(self, last_name: str) -> Student | None:
         for i in self.group:
