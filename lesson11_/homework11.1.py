@@ -1,23 +1,23 @@
 class Human:
 
-    def init(self, gender: str, age: int, first_name: str, last_name: str):
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str):
         self.gender = gender
         self.age = age
         self.first_name = first_name
         self.last_name = last_name
 
-    def str(self):
+    def __str__(self):
         return f'{self.first_name} {self.last_name}: {self.gender}, {self.age} years old'
 
 
 class Student(Human):
 
     def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str):
-        self.init(gender, age, first_name, last_name)
+        super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
 
     def __str__(self):
-        return f'{self.str()} record book: {self.record_book} '
+        return f'{super().__str__()} record book: {self.record_book} '
 
 
 class Group:
@@ -30,14 +30,12 @@ class Group:
         self.group.add(student)
 
     def delete_student(self, last_name: str):
-        for i in self.group:
-            if i.last_name == last_name:
-                return self.group.discard(i)
+        self.group.discard(self.find_student(last_name))
 
     def find_student(self, last_name: str) -> Student | None:
-        for i in self.group:
-            if i.last_name == last_name:
-                return i
+        for student in self.group:
+            if student.last_name == last_name:
+                return student
         return None
 
     def __str__(self):

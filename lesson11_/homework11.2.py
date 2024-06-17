@@ -15,17 +15,19 @@ class Counter:
         self.min_value = min_min
 
     def step_up(self):
-        if self.current+1 > self.max_value:
+        step = self.current+1
+        if step > self.max_value:
             raise ValueError('max value')
         else:
-            self.current += 1
+            self.current = step
             return self.current
 
     def step_down(self):
-        if self.current - 1 < self.min_value:
+        step = self.current - 1
+        if step < self.min_value:
             raise ValueError('min value')
         else:
-            self.current -= 1
+            self.current = step
             return self.current
 
     def get_current(self):
