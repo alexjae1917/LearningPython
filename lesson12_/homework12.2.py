@@ -30,7 +30,11 @@ class Order():
         self.total = 0
 
     def __str__(self):
-        return f'{self.purchaser}\n{dict(self.cart)}'
+        out = f'User: {self.purchaser} \nItems:'
+        for product, cnt in self.cart.items():
+            out += f'\n{product}: {cnt}'
+        out += f'\nThe total cost: {self.get_total()}'
+        return f'\n{out}'
 
     def add_item(self, item: Product, count: int):
         self.cart[item] = count
@@ -63,5 +67,6 @@ cart1.add_item(zebra,5)
 cart1.add_item(xprinter,4)
 cart2.add_item(hpc,2)
 
-print(cart1.get_total())
+print(cart1)
+print(cart2)
 
