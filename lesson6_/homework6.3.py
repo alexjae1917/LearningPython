@@ -1,4 +1,5 @@
-number = input("Enter some number: ")
+
+number = '999' #input("Enter some number: ")
 multi = 10
 while multi > 9:
     multi = 1
@@ -8,3 +9,4 @@ while multi > 9:
     number = str(multi)
 
 print(multi)
+
