@@ -43,7 +43,7 @@ class Order():
     def get_total(self):
         self.total = 0
         for product, cnt in self.cart.items():
-            self.total += (self.product.price * cnt)
+            self.total += (product.price * cnt)
         return self.total
 
 
@@ -51,13 +51,17 @@ user1 = Purchaser('Vasiliy','Vasiliev','Ivanovich',380975641020)
 user2 = Purchaser('Ivan','Fedorov','Petrovich',380872649011)
 user3 = Purchaser('Alexander','Makarov','Alexeevich',3809645342)
 
-Zebra = Product('Zebra DS', 2500, 'scaner', 'USA')
-Xprinter = Product('XPC 58 H', 3500, 'printer','China')
-HPC = Product ('HPC 16s', 2100, 'cashbox', 'Lithuania')
+zebra = Product('Zebra DS', 2500, 'scaner', 'USA')
+xprinter = Product('XPC 58 H', 3500, 'printer','China')
+hpc = Product ('HPC 16s', 2100, 'cashbox', 'Lithuania')
 
 cart1 = Order(user1)
 cart2 = Order(user2)
 cart3 = Order(user3)
 
-cart1.add_item()
+cart1.add_item(zebra,5)
+cart1.add_item(xprinter,4)
+cart2.add_item(hpc,2)
+
+print(cart1.get_total())
 
