@@ -16,12 +16,26 @@ class Rectangle():
                 return i
         return 1
 
+    @staticmethod
+    def new_rect(a,sq):
+        new_lenth = self.sizes(self.lenth + self.width, new_square)
+        new_width = new_square / new_lenth
+        new = Rectangle(new_lenth, new_width)
+
+
     def __add__(self,other):
         new_square = self.square()+other.square()
         new_lenth = self.sizes(self.lenth + self.width, new_square)
         new_width = new_square/new_lenth
         new = Rectangle(new_lenth,new_width)
         return new
+
+    def __mul__(self, number: int):
+        new_square = self.square()*number
+        new_lenth = self.sizes(self.lenth + self.width, new_square)
+        new_width = new_square / new_lenth
+        new = Rectangle(new_lenth, new_width)
+
 
     def __gt__(self,other):
         if self.square() > other.Rectangle():

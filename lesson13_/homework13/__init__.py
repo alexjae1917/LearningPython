@@ -1,3 +1,3 @@
-from .Group import Group
-from .Student import Student
-from .Human import Human
+from lesson13_.homework13.Group import Group
+from lesson13_.homework13.Student import Student
+from lesson13_.homework13.Human import Human
