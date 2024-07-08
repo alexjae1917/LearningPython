@@ -10,31 +10,29 @@ class Rectangle():
         return self.width * self.lenth
 
     @staticmethod
-    def sizes(a,sq):
-        for i in range(a,sq):
-            if sq % i ==0:
+    def sizes(lenth, sq):
+        for i in range(lenth, sq):
+            if sq % i == 0:
                 return i
         return 1
 
-    @staticmethod
-    def new_rect(a,sq):
-        new_lenth = self.sizes(self.lenth + self.width, new_square)
-        new_width = new_square / new_lenth
+
+    def new_rect(self,a,sq):
+        new_lenth = self.sizes(a, sq)
+        new_width = sq / new_lenth
         new = Rectangle(new_lenth, new_width)
+        return new
 
 
     def __add__(self,other):
         new_square = self.square()+other.square()
-        new_lenth = self.sizes(self.lenth + self.width, new_square)
-        new_width = new_square/new_lenth
-        new = Rectangle(new_lenth,new_width)
-        return new
+        new_rect = self.new_rect(self.lenth + self.width, new_square)
+        return new_rect
 
     def __mul__(self, number: int):
         new_square = self.square()*number
-        new_lenth = self.sizes(self.lenth + self.width, new_square)
-        new_width = new_square / new_lenth
-        new = Rectangle(new_lenth, new_width)
+        new_rect = self.new_rect(self.lenth + number, new_square)
+        return new_rect
 
 
     def __gt__(self,other):
