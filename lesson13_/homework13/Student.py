@@ -7,7 +7,7 @@ class Student(Human):
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
 
-    def hash(self):
+    def __hash__(self):
         return hash(str(self))
 
     def __str__(self):
