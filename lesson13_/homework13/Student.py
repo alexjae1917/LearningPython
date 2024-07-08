@@ -1,4 +1,4 @@
-from lesson13_.homework13 import Human
+from lesson13_.homework13.Human import Human
 
 
 class Student(Human):

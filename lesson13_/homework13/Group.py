@@ -1,4 +1,4 @@
-from lesson13_.homework13 import Student
+from lesson13_.homework13.Student import Student
 
 
 class Group:
