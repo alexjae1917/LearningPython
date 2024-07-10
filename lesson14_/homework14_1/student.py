@@ -1,4 +1,4 @@
-from lesson14_.homework14_1.Human import Human
+from lesson14_.homework14_1.human import Human
 
 
 class Student(Human):
@@ -11,24 +11,17 @@ class Student(Human):
         return hash(str(self))
 
     def __eq__(self,other):
-        if self.age == other.age:
-            return True
-        return False
+        return self.age == other.age
+
 
     def __lt__(self,other):
-        if self.age < other.age:
-            return True
-        return False
+        return self.age < other.age
 
     def __ne__(self,other):
-        if self.age != other.age:
-            return True
-        return False
+        return self.age != other.age
 
     def __gt__(self,other):
-        if self.age > other.age:
-            return True
-        return False
+        return self.age > other.age
 
 
     def __str__(self):

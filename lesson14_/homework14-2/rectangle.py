@@ -36,24 +36,20 @@ class Rectangle():
 
 
     def __gt__(self,other):
-        if self.square() > other.Rectangle():
-            return True
-        return False
+        return self.square() > other.square()
+
 
     def __lt__(self,other):
-        if self.square() < other.Rectangle():
-            return True
-        return False
+        return self.square() < other.square()
+
 
     def __eq__(self,other):
-        if self.square() == other.Rectangle():
-            return True
-        return False
+        return self.square() == other.square()
+
 
     def __ne__(self,other):
-        if self.square() != other.Rectangle():
-            return True
-        return False
+        return self.square() != other.square()
+
 
     def __str__(self):
         return f'rectangle with:\nlenth {self.lenth}\nwidth {self.width}\nSquare {self.square()}\n'
