@@ -10,7 +10,10 @@ class Rectangle():
         return self.width * self.lenth
 
     @staticmethod
-    def sizes(lenth, sq):
+    def size(lenth: int, sq:int) -> int:
+        """"
+       Поиск числа, на которое новая площадь делится на цело
+       """
         for i in range(lenth, sq):
             if sq % i == 0:
                 return i
@@ -18,7 +21,7 @@ class Rectangle():
 
 
     def new_rect(self,a,sq):
-        new_lenth = self.sizes(a, sq)
+        new_lenth = self.size(a, sq)
         new_width = sq / new_lenth
         new = Rectangle(new_lenth, new_width)
         return new
